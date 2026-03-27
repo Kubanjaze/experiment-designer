@@ -42,3 +42,8 @@ Outputs: proposed_compounds.json, experiment_report.txt
 | Est. cost | $0.0026 |
 
 Key finding: Claude correctly identified three distinct strategies — (1) optimize the best scaffold further, (2) transplant a winning substituent to an underexplored scaffold, (3) rescue the weakest series. This mirrors real medchem prioritization.
+
+## Risks (resolved)
+- Claude may propose existing compounds instead of novel ones — not observed; proposed modifications of existing scaffolds
+- Predicted pIC50 values may be unrealistically high — range 7.68-8.42, within plausible bounds
+- Generated SMILES may be invalid — would require RDKit validation (not implemented in this phase)
